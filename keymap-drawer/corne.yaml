@@ -1,8 +1,93 @@
 layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
 layers:
-  default: [↹, Q, W, E, R, T, Y, U, I, O, P, ⌫, Ctrl, A, S, D, F, G, H, J, K, L, ;, '''', Shift, Z, X, C, V, B, N, M, ',', ., /, Esc, Gui, lower, ␣, ⏎, raise, Alt]
-  lower:
+  default:
+  - {t: Esc, s: '`'}
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - '-'
   - ↹
+  - {t: A, h: oth}
+  - {t: S, h: sym}
+  - {t: D, h: nav}
+  - {t: F, h: LSHIFT}
+  - G
+  - {t: H, h: Gui+ Alt}
+  - {t: J, h: LSHIFT}
+  - {t: K, h: nav}
+  - {t: L, h: sym}
+  - {t: ;, h: oth}
+  - ''''
+  - Shift
+  - {t: Z, h: LSHIFT}
+  - X
+  - {t: C, h: LCTL}
+  - {t: V, h: symnum}
+  - {t: B, h: num}
+  - N
+  - M
+  - ','
+  - .
+  - {t: /, h: RSHIFT}
+  - \
+  - {t: _, h: Shift}
+  - Gui
+  - {t: ⌫, h: Ctl+Sft+ Alt}
+  - {t: ␣, h: Ctl+Sft+ Alt}
+  - {t: ENTER, h: Gui+Ctl+Sft+ Alt}
+  - {t: '-', h: Shift}
+  nav:
+  - '`'
+  - {t: Esc, s: '`'}
+  - Vol Down
+  - Vol Up
+  - '['
+  - '{'
+  - '}'
+  - ']'
+  - ''
+  - ''
+  - ''
+  - PLAY PAUSE
+  - '`'
+  - '`'
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ←
+  - ↓
+  - ↑
+  - →
+  - '"'
+  - '~'
+  - ''
+  - '~'
+  - ''
+  - Gui+Sft+Ctl+ 3
+  - Gui+Sft+Ctl+ 4
+  - '['
+  - ']'
+  - '-'
+  - '='
+  - ''''
+  - \
+  - '|'
+  - LCTL
+  - Alt
+  - \
+  - ↹
+  - '='
+  - +
+  sym:
+  - '~'
   - '1'
   - '2'
   - '3'
@@ -13,39 +98,39 @@ layers:
   - '8'
   - '9'
   - '0'
-  - ⌫
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
+  - {t: ▽, type: trans}
+  - '~'
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - '{'
   - ←
   - ↓
   - ↑
   - →
+  - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Shift
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Gui
-  - {type: held}
-  - ␣
-  - ⏎
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - '{'
+  - '}'
+  - '-'
+  - '='
+  - '['
+  - '|'
+  - \
+  - LCTL
   - Alt
-  raise:
-  - ↹
+  - ⌫
+  - ␣
+  - '='
+  - +
+  oth:
+  - {t: ▽, type: trans}
   - '!'
   - '@'
   - '#'
@@ -56,34 +141,120 @@ layers:
   - KP MULTIPLY
   - (
   - )
-  - ⌫
-  - Ctrl
+  - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&mkp LCLK'
-  - {t: ▽, type: trans}
-  - '&mkp RCLK'
-  - '-'
-  - '='
-  - '['
-  - ']'
-  - \
-  - '`'
-  - Shift
+  - {t: '&tdclr', type: held}
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - Home
+  - End
+  - Page Up
+  - Page Down
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - RGB TOG
+  - RGB EFR
+  - RGB EFF
+  - RGB BRI
+  - '&tdrst'
+  - '&tdrst'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - _
-  - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Gui
+  - ⌫
+  - '='
+  - +
   - {t: ▽, type: trans}
-  - ␣
-  - ⏎
-  - {type: held}
+  num:
+  - '`'
+  - {t: Esc, s: '`'}
+  - Vol Down
+  - Vol Up
+  - '['
+  - '{'
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - PLAY PAUSE
+  - '`'
+  - '`'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '4'
+  - '5'
+  - '6'
+  - '"'
+  - '~'
+  - ''
+  - '~'
+  - ''
+  - Gui+Sft+Ctl+ 3
+  - Gui+Sft+Ctl+ 4
+  - {t: '[', type: held}
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - \
+  - '|'
+  - LCTL
   - Alt
+  - \
+  - '0'
+  - .
+  - ENTER
+  symnum:
+  - '`'
+  - {t: Esc, s: '`'}
+  - Vol Down
+  - Vol Up
+  - '['
+  - '{'
+  - ''
+  - AMPS
+  - KP MULTIPLY
+  - (
+  - ''
+  - PLAY PAUSE
+  - '`'
+  - '`'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $
+  - '%'
+  - ^
+  - →
+  - '~'
+  - ''
+  - '~'
+  - ''
+  - Gui+Sft+Ctl+ 3
+  - {t: Gui+Sft+Ctl+ 4, type: held}
+  - '['
+  - ''
+  - '!'
+  - '@'
+  - '#'
+  - ''''
+  - '|'
+  - LCTL
+  - Alt
+  - \
+  - )
+  - .
+  - ENTER
